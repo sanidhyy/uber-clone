@@ -17,7 +17,7 @@ export const tokenCache = {
       }
       return item;
     } catch (error) {
-      console.error("SecureStore get item error: ", error);
+      console.error("GET_TOKEN_CACHE: ", error);
       await SecureStore.deleteItemAsync(key);
       return null;
     }
@@ -26,7 +26,7 @@ export const tokenCache = {
     try {
       return SecureStore.setItemAsync(key, value);
     } catch (err) {
-      console.error("TOKEN_CACHE: ", err);
+      console.error("SAVE_TOKEN_CACHE: ", err);
 
       return;
     }
