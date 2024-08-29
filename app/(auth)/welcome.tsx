@@ -1,10 +1,11 @@
-import { CustomButton } from "@/components/custom-button";
-import { onboarding } from "@/constants";
 import { router } from "expo-router";
 import { useRef, useState } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Swiper from "react-native-swiper";
+
+import { CustomButton } from "@/components/custom-button";
+import { onboarding } from "@/constants";
 
 const Welcome = () => {
   const swiperRef = useRef<Swiper>(null);
@@ -32,6 +33,7 @@ const Welcome = () => {
           <View key={item.id} className="flex items-center justify-center p-5">
             <Image
               source={item.image}
+              alt={`Onboarding Item ${item.id}`}
               className="w-full h-[300px]"
               resizeMode="contain"
             />
