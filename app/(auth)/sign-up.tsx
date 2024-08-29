@@ -1,10 +1,11 @@
+import { Link } from "expo-router";
 import { useState } from "react";
 import { Image, ScrollView, Text, View } from "react-native";
 
-import { InputField } from "@/components/input-field";
-import { icons, images } from "@/constants";
 import { CustomButton } from "@/components/custom-button";
-import { Link } from "expo-router";
+import { InputField } from "@/components/input-field";
+import { OAuth } from "@/components/oauth";
+import { icons, images } from "@/constants";
 
 const SignUp = () => {
   const [form, setForm] = useState({
@@ -78,7 +79,7 @@ const SignUp = () => {
             className="mt-6"
           />
 
-          {/* OAuth */}
+          <OAuth />
 
           <Link
             href="/sign-in"
