@@ -45,6 +45,10 @@ const SignUp = () => {
         password: "",
       }));
     } catch (err: any) {
+      setForm((prevForm) => ({
+        ...prevForm,
+        password: "",
+      }));
       Alert.alert("Error", err?.errors[0]?.longMessage);
     }
   };
