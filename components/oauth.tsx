@@ -4,7 +4,11 @@ import { icons } from "@/constants";
 
 import { CustomButton } from "./custom-button";
 
-export const OAuth = () => {
+type OAuthProps = {
+  title: string;
+};
+
+export const OAuth = ({ title }: OAuthProps) => {
   const handleGoogleSignIn = () => {};
 
   return (
@@ -18,7 +22,7 @@ export const OAuth = () => {
       </View>
 
       <CustomButton
-        title="Log in with Google"
+        title={title}
         className="mt-5 w-full shadow-none"
         iconLeft={() => (
           <Image

@@ -1,3 +1,4 @@
+import { ClerkProvider, ClerkLoaded } from "@clerk/clerk-expo";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
@@ -28,12 +29,20 @@ const RootLayout = () => {
     return null;
   }
 
+  const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!;
+
+  if (!publishableKey) throw new Error("Missing Clerk Publishable Key.");
+
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-      <Stack.Screen name="(root)" options={{ headerShown: false }} />
-      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-    </Stack>
+    <ClerkProvider publishableKey={publishableKey}>
+      <ClerkLoaded>
+        <Stack>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="(root)" options={{ headerShown: false }} />
+          <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+        </Stack>
+      </ClerkLoaded>
+    </ClerkProvider>
   );
 };
 
