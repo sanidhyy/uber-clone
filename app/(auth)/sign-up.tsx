@@ -86,7 +86,7 @@ const SignUp = () => {
             className="text-lg text-center text-general-200 mt-10"
           >
             <Text>Already have an account? </Text>
-            <Text className="text-primary-500">Login</Text>
+            <Text className="text-primary-500">Sign in</Text>
           </Link>
         </View>
 
