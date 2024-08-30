@@ -1,4 +1,6 @@
 import { useUser } from "@clerk/clerk-expo";
+import * as Location from "expo-location";
+import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   FlatList,
@@ -13,6 +15,7 @@ import { GoogleTextInput } from "@/components/google-text-input";
 import { Map } from "@/components/map";
 import { RideCard } from "@/components/ride-card";
 import { icons, images } from "@/constants";
+import { useLocationStore } from "@/store";
 
 const recentRides = [
   {
@@ -126,11 +129,37 @@ const recentRides = [
 ];
 
 const Home = () => {
+  const { setUserLocation, setDestinationLocation } = useLocationStore();
   const { user } = useUser();
   const isLoading = false;
 
+  const [hasPermissions, setHasPermissions] = useState(false);
+
   const handleSignOut = () => {};
   const handleDestinationPress = () => {};
+
+  useEffect(() => {
+    const requestLocation = async () => {
+      let { status } = await Location.requestForegroundPermissionsAsync();
+
+      if (status !== "granted") return setHasPermissions(false);
+
+      let location = await Location.getCurrentPositionAsync();
+
+      const address = await Location.reverseGeocodeAsync({
+        longitude: location.coords?.longitude,
+        latitude: location.coords?.latitude,
+      });
+
+      setUserLocation({
+        latitude: location.coords.latitude,
+        longitude: location.coords.longitude,
+        address: `${address[0].name}, ${address[0].region}`,
+      });
+    };
+
+    requestLocation();
+  }, [setUserLocation]);
 
   return (
     <SafeAreaView className="bg-general-500">
@@ -185,7 +214,7 @@ const Home = () => {
             />
 
             <Text className="text-xl font-JakartaBold mt-5 mb-3">
-              Your current location
+              Your Current Location
             </Text>
 
             <View className="flex flex-row items-center bg-transparent h-[300px]">

@@ -1,5 +1,6 @@
-import type { GoogleInputProps } from "@/types/type";
 import { Text, View } from "react-native";
+
+import type { GoogleInputProps } from "@/types/type";
 
 export const GoogleTextInput = ({
   icon,
