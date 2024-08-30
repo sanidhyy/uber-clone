@@ -12,6 +12,9 @@ declare global {
 
       // geoapify api key
       EXPO_PUBLIC_GEOAPIFY_API_KEY: string;
+
+      // google api key
+      EXPO_PUBLIC_GOOGLE_API_KEY: string;
     }
   }
 }
