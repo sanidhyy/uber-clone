@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Jakarta: ["Jakarta", "sans-serif"],
+        Jakarta: ["Jakarta-Regular", "sans-serif"],
         JakartaBold: ["Jakarta-Bold", "sans-serif"],
         JakartaExtraBold: ["Jakarta-ExtraBold", "sans-serif"],
         JakartaExtraLight: ["Jakarta-ExtraLight", "sans-serif"],
