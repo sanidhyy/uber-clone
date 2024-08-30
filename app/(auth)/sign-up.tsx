@@ -8,6 +8,7 @@ import { CustomButton } from "@/components/custom-button";
 import { InputField } from "@/components/input-field";
 import { OAuth } from "@/components/oauth";
 import { icons, images } from "@/constants";
+import { fetchAPI } from "@/lib/fetch";
 
 const SignUp = () => {
   const { isLoaded, signUp, setActive } = useSignUp();
@@ -62,7 +63,14 @@ const SignUp = () => {
       });
 
       if (completeSignUp.status === "complete") {
-        // TODO: Create a database user
+        await fetchAPI("/(api)/user", {
+          method: "POST",
+          body: JSON.stringify({
+            name: form.name,
+            email: form.email,
+            clerkId: completeSignUp.createdUserId,
+          }),
+        });
 
         await setActive({ session: completeSignUp.createdSessionId });
         setVerification((prevVerification) => ({
@@ -104,7 +112,7 @@ const SignUp = () => {
         <View className="p-5">
           <InputField
             label="Name"
-            placeholder="Enter your name"
+            placeholder="John Doe"
             icon={icons.person}
             value={form.name}
             onChangeText={(value) =>
@@ -113,11 +121,12 @@ const SignUp = () => {
                 name: value,
               }))
             }
+            autoCapitalize="sentences"
           />
 
           <InputField
             label="Email"
-            placeholder="Enter your email"
+            placeholder="john.doe@email.com"
             icon={icons.email}
             value={form.email}
             onChangeText={(value) =>
@@ -126,11 +135,12 @@ const SignUp = () => {
                 email: value,
               }))
             }
+            keyboardType="email-address"
           />
 
           <InputField
             label="Password"
-            placeholder="Enter your password"
+            placeholder="••••••••"
             icon={icons.lock}
             secureTextEntry
             value={form.password}
@@ -180,8 +190,10 @@ const SignUp = () => {
             <InputField
               label="Code"
               icon={icons.lock}
-              placeholder="12345"
+              placeholder="••••••"
               value={verification.code}
+              maxLength={6}
+              secureTextEntry
               keyboardType="numeric"
               onChangeText={(code) =>
                 setVerification((prevVerification) => ({

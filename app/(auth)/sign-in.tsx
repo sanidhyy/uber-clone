@@ -63,7 +63,7 @@ const SignIn = () => {
         <View className="p-5">
           <InputField
             label="Email"
-            placeholder="Enter your email"
+            placeholder="john.doe@email.com"
             icon={icons.email}
             value={form.email}
             onChangeText={(value) =>
@@ -72,11 +72,12 @@ const SignIn = () => {
                 email: value,
               }))
             }
+            keyboardType="email-address"
           />
 
           <InputField
             label="Password"
-            placeholder="Enter your password"
+            placeholder="••••••••"
             icon={icons.lock}
             secureTextEntry
             value={form.password}

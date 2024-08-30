@@ -43,6 +43,8 @@ export const InputField = ({
           <TextInput
             className={`rounded-full p-4 font-JakartaSemiBold text-[15px] flex-1 text-left ${inputStyles}`}
             secureTextEntry={secureTextEntry}
+            autoCapitalize="none"
+            autoComplete="off"
             selectionColor="#0286ff"
             {...props}
           />
