@@ -9,6 +9,9 @@ declare global {
 
       // postgres db url (neon db)
       DATABASE_URL: string;
+
+      // geoapify api key
+      EXPO_PUBLIC_GEOAPIFY_API_KEY: string;
     }
   }
 }

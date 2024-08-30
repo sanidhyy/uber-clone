@@ -10,7 +10,7 @@ export async function POST(req: Request) {
         error: "Missing required fields!",
       },
       {
-        status: 400,
+        status: 404,
       },
     );
   }
@@ -33,6 +33,6 @@ export async function POST(req: Request) {
   } catch (error) {
     console.log(error);
 
-    return Response.json({ error });
+    return Response.json({ error }, { status: 500 });
   }
 }

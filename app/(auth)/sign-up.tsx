@@ -30,6 +30,8 @@ const SignUp = () => {
 
     try {
       await signUp.create({
+        firstName: form.name,
+        lastName: "",
         emailAddress: form.email,
         password: form.password,
       });
@@ -121,7 +123,7 @@ const SignUp = () => {
                 name: value,
               }))
             }
-            autoCapitalize="sentences"
+            autoCapitalize="words"
           />
 
           <InputField
@@ -162,7 +164,7 @@ const SignUp = () => {
 
           <Link
             href="/sign-in"
-            className="text-lg text-center text-general-200 mt-10"
+            className="text-base text-center text-general-200 mt-10"
           >
             <Text>Already have an account? </Text>
             <Text className="text-primary-500">Sign in</Text>
@@ -228,7 +230,7 @@ const SignUp = () => {
             </Text>
 
             <Text className="text-base text-gray-400 font-Jakarta text-center mt-2">
-              You&apos;ve succesfully verified your accound.
+              You&apos;ve succesfully verified your account.
             </Text>
 
             <CustomButton

@@ -65,7 +65,7 @@ declare interface ButtonProps extends TouchableOpacityProps {
 declare interface GoogleInputProps {
   icon?: string;
   initialLocation?: string;
-  containerStyle?: string;
+  containerStyles?: string;
   textInputBackgroundColor?: string;
   handlePress: ({
     latitude,
