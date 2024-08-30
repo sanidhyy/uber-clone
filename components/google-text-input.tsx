@@ -13,7 +13,6 @@ export const GoogleTextInput = ({
 }: GoogleInputProps) => {
   const googlePlacesApiKey = process.env.EXPO_PUBLIC_GOOGLE_API_KEY!;
 
-  console.log(googlePlacesApiKey);
   return (
     <View
       className={`flex flex-row items-center justify-center relative z-50 rounded-xl ${containerStyles}`}
@@ -77,7 +76,6 @@ export const GoogleTextInput = ({
           placeholderTextColor: "gray",
           placeholder: initialLocation ?? "Where do you want to go?",
         }}
-        onFail={console.log}
       />
     </View>
   );

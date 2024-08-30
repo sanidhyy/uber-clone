@@ -144,8 +144,6 @@ const Home = () => {
   }) => {
     setDestinationLocation(location);
 
-    console.log("Hello World!");
-
     router.push("/(root)/find-ride");
   };
 
