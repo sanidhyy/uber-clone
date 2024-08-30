@@ -16,6 +16,7 @@ import { Map } from "@/components/map";
 import { RideCard } from "@/components/ride-card";
 import { icons, images } from "@/constants";
 import { useLocationStore } from "@/store";
+import { router } from "expo-router";
 
 const recentRides = [
   {
@@ -136,7 +137,17 @@ const Home = () => {
   const [hasPermissions, setHasPermissions] = useState(false);
 
   const handleSignOut = () => {};
-  const handleDestinationPress = () => {};
+  const handleDestinationPress = (location: {
+    latitude: number;
+    longitude: number;
+    address: string;
+  }) => {
+    setDestinationLocation(location);
+
+    console.log("Hello World!");
+
+    router.push("/(root)/find-ride");
+  };
 
   useEffect(() => {
     const requestLocation = async () => {
