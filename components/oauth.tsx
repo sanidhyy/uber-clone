@@ -1,6 +1,6 @@
 import { useOAuth } from "@clerk/clerk-expo";
 import { useCallback } from "react";
-import { Alert, Image, Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 
 import { icons } from "@/constants";
 
@@ -19,14 +19,9 @@ export const OAuth = ({ title }: OAuthProps) => {
     try {
       const result = await googleOAuth(startOAuthFlow);
 
-      if (result?.code === "session_exists") {
+      if (result?.code === "session_exists" || result?.code === "success") {
         router.replace("/(root)/(tabs)/home");
       }
-
-      Alert.alert(
-        result?.success ? "Success" : "Error",
-        result?.message || "You are Logged In!",
-      );
     } catch (err) {
       console.error("OAuth error", err);
     }
