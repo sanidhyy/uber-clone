@@ -14,7 +14,7 @@ declare interface MarkerData {
   latitude: number;
   longitude: number;
   id: number;
-  title: string;
+  title?: string;
   profile_image_url: string;
   car_image_url: string;
   car_seats: number;
