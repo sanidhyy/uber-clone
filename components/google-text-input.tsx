@@ -64,6 +64,7 @@ export const GoogleTextInput = ({
           language: "en",
         }}
         renderLeftButton={() => (
+          // TODO: replace later with View and remove onPress
           <TouchableOpacity
             onPress={() => {
               handlePress({

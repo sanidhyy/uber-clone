@@ -1,12 +1,20 @@
 import { useEffect, useState } from "react";
+import { ActivityIndicator, Text, View } from "react-native";
 import MapView, { Marker, PROVIDER_DEFAULT } from "react-native-maps";
+import MapViewDirections from "react-native-maps-directions";
 
-import { calculateRegion, generateMarkersFromData } from "@/lib/map";
-import { useDriverStore, useLocationStore } from "@/store";
-import type { MarkerData } from "@/types/type";
 import { icons } from "@/constants";
+import { useFetch } from "@/lib/fetch";
+import {
+  calculateDriverTimes,
+  calculateRegion,
+  generateMarkersFromData,
+} from "@/lib/map";
+import { useDriverStore, useLocationStore } from "@/store";
+import type { Driver, MarkerData } from "@/types/type";
 
-const drivers = [
+// TODO: Remove mocked drivers later
+const mockedDrivers = [
   {
     id: 1,
     driver_id: 1,
@@ -20,7 +28,6 @@ const drivers = [
     rating: 4.8,
     latitude: 0,
     longitude: 0,
-    title: "",
     price: "45",
     time: 5,
   },
@@ -37,7 +44,6 @@ const drivers = [
     rating: 4.6,
     latitude: 0,
     longitude: 0,
-    title: "",
     price: "45",
     time: 5,
   },
@@ -54,7 +60,6 @@ const drivers = [
     rating: 4.7,
     latitude: 0,
     longitude: 0,
-    title: "",
     price: "45",
     time: 5,
   },
@@ -71,13 +76,14 @@ const drivers = [
     rating: 4.9,
     latitude: 0,
     longitude: 0,
-    title: "",
     price: "45",
     time: 5,
   },
 ];
 
 export const Map = () => {
+  const { data: drivers, loading, error } = useFetch<Driver[]>("/(api)/driver");
+
   const {
     userLatitude,
     userLongitude,
@@ -96,8 +102,6 @@ export const Map = () => {
 
   useEffect(() => {
     if (Array.isArray(drivers)) {
-      setDrivers(drivers);
-
       if (!userLatitude || !userLongitude) return;
 
       const newMarkers = generateMarkersFromData({
@@ -110,6 +114,49 @@ export const Map = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [drivers]);
+
+  useEffect(() => {
+    if (markers.length > 0 && destinationLatitude && destinationLatitude) {
+      // TODO: Uncomment this code block
+
+      /* calculateDriverTimes({
+        markers,
+        userLatitude,
+        userLongitude,
+        destinationLatitude,
+        destinationLongitude,
+      })
+        .then((drivers) => {
+          setDrivers(drivers as MarkerData[]);
+        }) */
+
+      // TODO: Remove this line
+      setDrivers(mockedDrivers);
+    }
+  }, [
+    markers,
+    destinationLatitude,
+    destinationLongitude,
+    userLatitude,
+    userLongitude,
+    setDrivers,
+  ]);
+
+  if (loading || !userLatitude || !userLongitude) {
+    return (
+      <View className="flex justify-between items-center w-full">
+        <ActivityIndicator size="small" color="#000" />
+      </View>
+    );
+  }
+
+  if (error) {
+    return (
+      <View className="flex justify-between items-center w-full">
+        <Text>Error: {error}</Text>
+      </View>
+    );
+  }
 
   return (
     <MapView
@@ -135,6 +182,34 @@ export const Map = () => {
           }
         />
       ))}
+
+      {destinationLatitude && destinationLongitude && (
+        <>
+          <Marker
+            key="destination"
+            coordinate={{
+              latitude: destinationLatitude,
+              longitude: destinationLongitude,
+            }}
+            title="Destination"
+            image={icons.pin}
+          />
+
+          <MapViewDirections
+            origin={{
+              latitude: userLatitude,
+              longitude: userLongitude,
+            }}
+            destination={{
+              latitude: destinationLatitude,
+              longitude: destinationLongitude,
+            }}
+            apikey={process.env.EXPO_PUBLIC_GOOGLE_API_KEY!}
+            strokeColor="#0286FF"
+            strokeWidth={3}
+          />
+        </>
+      )}
     </MapView>
   );
 };

@@ -24,7 +24,9 @@ export const DriverCard = ({
 
       <View className="flex-1 flex flex-col items-start justify-center mx-3">
         <View className="flex flex-row items-center justify-start mb-1">
-          <Text className="text-lg font-JakartaRegular">{item.title}</Text>
+          <Text className="text-lg font-JakartaRegular">
+            {item.title ?? `${item.first_name} ${item.last_name}`}
+          </Text>
 
           <View className="flex flex-row items-center space-x-1 ml-2">
             <Image source={icons.star} alt="Star" className="w-3.5 h-3.5" />
@@ -45,7 +47,7 @@ export const DriverCard = ({
           </Text>
 
           <Text className="text-sm font-JakartaRegular text-general-800">
-            {formatTime(item.time!)}
+            {formatTime(parseInt(`${item.time}`))}
           </Text>
 
           <Text className="text-sm font-JakartaRegular text-general-800 mx-1">

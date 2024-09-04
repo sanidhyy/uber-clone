@@ -15,7 +15,7 @@ const Welcome = () => {
   return (
     <SafeAreaView className="flex h-full items-center justify-between bg-white">
       <TouchableOpacity
-        onPress={() => router.replace("/(auth)/sign-up")}
+        onPress={() => router.push("/(auth)/sign-up")}
         className="w-full flex justify-end items-end p-5"
       >
         <Text className="text-black text-base font-JakartaBold">Skip</Text>
@@ -54,7 +54,7 @@ const Welcome = () => {
       <CustomButton
         onPress={() =>
           isLastSlide
-            ? router.replace("/(auth)/sign-up")
+            ? router.push("/(auth)/sign-up")
             : swiperRef.current?.scrollBy(1)
         }
         title={isLastSlide ? "Get Started" : "Next"}
