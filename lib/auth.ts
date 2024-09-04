@@ -1,4 +1,11 @@
+import type {
+  StartOAuthFlowParams,
+  StartOAuthFlowReturnType,
+} from "@clerk/clerk-expo";
+import * as Linking from "expo-linking";
 import * as SecureStore from "expo-secure-store";
+
+import { fetchAPI } from "./fetch";
 
 export interface TokenCache {
   getToken: (key: string) => Promise<string | undefined | null>;
@@ -31,4 +38,61 @@ export const tokenCache = {
       return;
     }
   },
+};
+
+type StartOAuthFlowType = (
+  startOAuthFlowParams?: StartOAuthFlowParams,
+) => Promise<StartOAuthFlowReturnType>;
+
+export const googleOAuth = async (startOAuthFlow: StartOAuthFlowType) => {
+  try {
+    const { createdSessionId, signUp, setActive } = await startOAuthFlow({
+      redirectUrl: Linking.createURL("/(root)/(tabs)/home", {
+        scheme: "ryde", // match with scheme in app.json
+      }),
+    });
+
+    if (createdSessionId) {
+      if (setActive) {
+        await setActive!({ session: createdSessionId });
+
+        if (signUp && signUp.createdUserId) {
+          await fetchAPI("/(api)/user", {
+            method: "POST",
+            body: JSON.stringify({
+              name: `${signUp.firstName} ${signUp.lastName}`,
+              email: signUp.emailAddress,
+              clerkId: signUp.createdUserId,
+            }),
+          });
+        }
+
+        return {
+          success: true,
+          code: "success",
+          message: "You are logged in.",
+        };
+      }
+
+      return {
+        success: false,
+        code: "failed",
+        message: "An error occured.",
+      };
+    } else {
+      // Use signIn or signUp for next steps such as MFA
+    }
+  } catch (err) {
+    console.log("[OAUTH]: ", err);
+
+    return {
+      success: false,
+      code: (
+        err as {
+          code?: string;
+        }
+      )?.code,
+      message: "Internal Server Error.",
+    };
+  }
 };
