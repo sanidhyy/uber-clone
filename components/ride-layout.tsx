@@ -29,6 +29,7 @@ export const RideLayout = ({
               <View className="w-10 h-10 bg-white rounded-full items-center justify-center">
                 <Image
                   source={icons.backArrow}
+                  alt="Back arrow"
                   resizeMode="contain"
                   className="w-6 h-6"
                 />
