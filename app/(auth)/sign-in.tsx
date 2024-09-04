@@ -27,7 +27,7 @@ const SignIn = () => {
 
       if (signInAttempt.status === "complete") {
         await setActive({ session: signInAttempt.createdSessionId });
-        router.push("/");
+        router.replace("/");
       } else {
         Alert.alert("Error", "Invalid email or password.");
         setForm((prevForm) => ({
