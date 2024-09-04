@@ -1,8 +1,8 @@
-import { View, Image, TouchableOpacity } from "react-native";
+import { View, Image } from "react-native";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 
 import { icons } from "@/constants";
-import { GoogleInputProps } from "@/types/type";
+import type { GoogleInputProps } from "@/types/type";
 
 export const GoogleTextInput = ({
   icon,
@@ -64,24 +64,14 @@ export const GoogleTextInput = ({
           language: "en",
         }}
         renderLeftButton={() => (
-          // TODO: replace later with View and remove onPress
-          <TouchableOpacity
-            onPress={() => {
-              handlePress({
-                latitude: 26.8467,
-                longitude: 80.9462,
-                address: "Lucknow, Uttar Pradesh",
-              });
-            }}
-            className="justify-center items-center w-6 h-6"
-          >
+          <View className="justify-center items-center w-6 h-6">
             <Image
               source={icon ? icon : icons.search}
               alt="Search"
               className="w-6 h-6"
               resizeMode="contain"
             />
-          </TouchableOpacity>
+          </View>
         )}
         textInputProps={{
           placeholderTextColor: "gray",

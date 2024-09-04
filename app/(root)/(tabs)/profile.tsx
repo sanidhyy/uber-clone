@@ -30,7 +30,7 @@ const Profile = () => {
           <View className="flex flex-col items-start justify-start w-full">
             <InputField
               label="First name"
-              placeholder={user?.firstName || "Not Found"}
+              placeholder={user?.firstName ?? "Your First name"}
               containerStyles="w-full mb-4"
               inputStyles="p-3.5"
               editable={false}
@@ -38,7 +38,7 @@ const Profile = () => {
 
             <InputField
               label="Last name"
-              placeholder={user?.lastName || "Not Found"}
+              placeholder={user?.lastName ?? "Your Last name"}
               containerStyles="w-full mb-4"
               inputStyles="p-3.5"
               editable={false}
@@ -47,7 +47,7 @@ const Profile = () => {
             <InputField
               label="Email"
               placeholder={
-                user?.primaryEmailAddress?.emailAddress || "Not Found"
+                user?.primaryEmailAddress?.emailAddress ?? "Your Email address"
               }
               containerStyles="w-full mb-4"
               inputStyles="p-3.5"

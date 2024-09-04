@@ -24,7 +24,9 @@ const Home = () => {
   const { setUserLocation, setDestinationLocation } = useLocationStore();
   const { signOut } = useAuth();
   const { user } = useUser();
-  const { data: recentRides, loading } = useFetch(`/(api)/ride/${user?.id}`);
+  const { data: recentRides, loading } = useFetch<Ride[]>(
+    `/(api)/ride/${user?.id}`,
+  );
 
   const [hasPermissions, setHasPermissions] = useState(false);
 
@@ -71,7 +73,7 @@ const Home = () => {
   return (
     <SafeAreaView className="bg-general-500">
       <FlatList
-        data={(recentRides as Ride[])?.slice(0, 5)}
+        data={recentRides?.slice(0, 5)}
         renderItem={({ item }) => <RideCard ride={item} />}
         className="px-5"
         keyboardShouldPersistTaps="handled"
