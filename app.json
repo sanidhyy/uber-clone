@@ -1,6 +1,8 @@
 {
   "expo": {
     "name": "Ryde",
+    "description": "Find your perfect ride with Ryde.",
+    "githubUrl": "https://github.com/sanidhyy/uber-clone",
     "slug": "Ryde",
     "version": "1.0.0",
     "orientation": "portrait",
