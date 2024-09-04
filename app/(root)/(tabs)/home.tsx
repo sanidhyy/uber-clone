@@ -1,6 +1,6 @@
 import { useAuth, useUser } from "@clerk/clerk-expo";
 import * as Location from "expo-location";
-import { router } from "expo-router";
+import { Link, router } from "expo-router";
 import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
@@ -15,6 +15,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { GoogleTextInput } from "@/components/google-text-input";
 import { Map } from "@/components/map";
 import { RideCard } from "@/components/ride-card";
+import { LINKS } from "@/config";
 import { icons, images } from "@/constants";
 import { useLocationStore } from "@/store";
 import { useFetch } from "@/lib/fetch";
@@ -108,12 +109,27 @@ const Home = () => {
                 {user?.firstName || user?.emailAddresses[0].emailAddress} 👋
               </Text>
 
-              <TouchableOpacity
-                onPress={handleSignOut}
-                className="justify-center items-center w-10 h-10 rounded-full bg-white"
-              >
-                <Image source={icons.out} className="w-4 h-4" alt="Logout" />
-              </TouchableOpacity>
+              <View className="flex flex-row items-center gap-x-1">
+                <Link
+                  href={LINKS.sourceCode}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="justify-center items-center w-10 h-10"
+                >
+                  <Image
+                    source={icons.github}
+                    className="w-6 h-6"
+                    alt="GitHub"
+                  />
+                </Link>
+
+                <TouchableOpacity
+                  onPress={handleSignOut}
+                  className="justify-center items-center w-10 h-10 rounded-full bg-white"
+                >
+                  <Image source={icons.out} className="w-4 h-4" alt="Logout" />
+                </TouchableOpacity>
+              </View>
             </View>
 
             <GoogleTextInput
