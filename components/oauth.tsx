@@ -1,12 +1,12 @@
 import { useOAuth } from "@clerk/clerk-expo";
+import { router } from "expo-router";
 import { useCallback } from "react";
 import { Image, Text, View } from "react-native";
 
 import { icons } from "@/constants";
+import { googleOAuth } from "@/lib/auth";
 
 import { CustomButton } from "./custom-button";
-import { googleOAuth } from "@/lib/auth";
-import { router } from "expo-router";
 
 type OAuthProps = {
   title: string;

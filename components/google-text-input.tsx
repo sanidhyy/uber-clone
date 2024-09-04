@@ -77,6 +77,7 @@ export const GoogleTextInput = ({
           >
             <Image
               source={icon ? icon : icons.search}
+              alt="Search"
               className="w-6 h-6"
               resizeMode="contain"
             />

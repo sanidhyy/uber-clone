@@ -222,6 +222,7 @@ const SignUp = () => {
           <View className="bg-white px-7 py-9 rounded-2xl min-h-[300px]">
             <Image
               source={images.check}
+              alt="Check"
               className="w-[110px] h-[110px] mx-auto my-5"
             />
 

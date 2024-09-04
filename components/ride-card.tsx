@@ -24,6 +24,7 @@ export const RideCard = ({ ride }: { ride: Ride }) => {
             source={{
               uri: `https://maps.geoapify.com/v1/staticmap?style=osm-bright&width=600&height=400&center=lonlat:${destination_longitude},${destination_latitude}&zoom=14&apiKey=${process.env.EXPO_PUBLIC_GEOAPIFY_API_KEY}`,
             }}
+            alt="Map"
             className="w-[80px] h-[90px] rounded-lg"
           />
 
