@@ -15,6 +15,10 @@ declare global {
 
       // google api key
       EXPO_PUBLIC_GOOGLE_API_KEY: string;
+
+      // stripe api key
+      EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY: string;
+      STRIPE_SECRET_KEY: string;
     }
   }
 }
