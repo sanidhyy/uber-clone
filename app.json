@@ -15,22 +15,39 @@
       "backgroundColor": "#2F80ED"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sanidhyy.Ryde"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.sanidhyy.Ryde"
     },
     "web": {
       "bundler": "metro",
       "output": "server",
       "favicon": "./assets/images/favicon.png"
     },
-    "plugins": [["expo-router", { "origin": "https://example.com/" }]],
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://example.com/"
+        }
+      ]
+    ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": "https://example.com/"
+      },
+      "eas": {
+        "projectId": "fe645595-95a5-45b2-825d-aa6a0ddb2b9c"
+      }
     }
   }
 }
