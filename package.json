@@ -1,7 +1,7 @@
 {
   "name": "uber-clone",
   "main": "expo-router/entry",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
@@ -14,6 +14,63 @@
   "jest": {
     "preset": "jest-expo"
   },
+  "author": {
+    "name": "Sanidhya Kumar Verma",
+    "email": "sanidhya.verma12345@gmail.com",
+    "url": "https://github.com/sanidhyy"
+  },
+  "description": "Find your perfect ride with Ryde.",
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-native",
+    "expo",
+    "uber-clone",
+    "uber",
+    "expo-router",
+    "clerk",
+    "postgresql",
+    "alert",
+    "neon-postgres",
+    "zustand",
+    "mysql",
+    "google-maps",
+    "directions-api",
+    "places-api",
+    "react-icons",
+    "postcss",
+    "prettier",
+    "nativewind",
+    "tailwindcss",
+    "tailwindcss-animate",
+    "ui/ux",
+    "js",
+    "javascript",
+    "typescript",
+    "eslint",
+    "html",
+    "css"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanidhyy/uber-clone.git"
+  },
+  "homepage": "https://github.com/sanidhyy/uber-clone#readme",
+  "bugs": {
+    "url": "https://github.com/sanidhyy/uber-clone/issues",
+    "email": "sanidhya.verma12345@gmail.com"
+  },
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/sanidhy"
+    },
+    {
+      "type": "Buy me a coffee",
+      "url": "https://www.buymeacoffee.com/sanidhy"
+    }
+  ],
   "dependencies": {
     "@clerk/clerk-expo": "^2.2.5",
     "@expo/metro-runtime": "~3.2.3",
