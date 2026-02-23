@@ -42,6 +42,8 @@ Here is the folder structure of Ryde.
 <!--- FOLDER_STRUCTURE_START --->
 ```bash
 uber-clone/
+  |- .eas/
+    |-- workflows/
   |- app/
     |-- (api)/
     |-- (auth)/
