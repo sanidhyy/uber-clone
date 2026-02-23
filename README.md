@@ -40,7 +40,6 @@
 Here is the folder structure of Ryde.
 
 <!--- FOLDER_STRUCTURE_START --->
-
 ```bash
 uber-clone/
   |- app/
@@ -51,9 +50,6 @@ uber-clone/
     |-- +html.tsx
     |-- index.tsx
   |- assets/
-    |-- fonts/
-    |-- icons/
-    |-- images/
   |- components/
     |-- custom-button.tsx
     |-- driver-card.tsx
@@ -80,8 +76,8 @@ uber-clone/
   |- types/
     |-- image.d.ts
     |-- type.d.ts
-  |- .env
   |- .env.example
+  |- .env/.env.local
   |- .eslintrc.js
   |- .gitignore
   |- app.json
@@ -94,7 +90,6 @@ uber-clone/
   |- tailwind.config.js
   |- tsconfig.json
 ```
-
 <!--- FOLDER_STRUCTURE_END --->
 
 <br />
@@ -252,55 +247,55 @@ You might encounter some bugs while using this app. You are more than welcome to
 Useful resources and libraries that are used in Ryde:
 
 <!--- DEPENDENCIES_START --->
+- [@babel/core](https://www.npmjs.com/package/@babel/core): ^7.20.0
+- [@clerk/clerk-expo](https://www.npmjs.com/package/@clerk/clerk-expo): ^2.2.5
+- [@expo/metro-runtime](https://www.npmjs.com/package/@expo/metro-runtime): ~3.2.3
+- [@expo/vector-icons](https://www.npmjs.com/package/@expo/vector-icons): ^14.0.2
+- [@gorhom/bottom-sheet](https://www.npmjs.com/package/@gorhom/bottom-sheet): ^4.6.4
+- [@neondatabase/serverless](https://www.npmjs.com/package/@neondatabase/serverless): ^0.9.4
+- [@react-navigation/native](https://www.npmjs.com/package/@react-navigation/native): ^6.0.2
+- [@stripe/stripe-react-native](https://www.npmjs.com/package/@stripe/stripe-react-native): ^0.38.4
+- [@types/jest](https://www.npmjs.com/package/@types/jest): ^29.5.12
+- [@types/react](https://www.npmjs.com/package/@types/react): ~18.2.45
+- [@types/react-test-renderer](https://www.npmjs.com/package/@types/react-test-renderer): ^18.0.7
+- [eslint](https://www.npmjs.com/package/eslint): ^8.57.0
+- [eslint-config-expo](https://www.npmjs.com/package/eslint-config-expo): ^7.1.2
+- [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier): ^9.1.0
+- [eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier): ^5.2.1
+- [expo](https://www.npmjs.com/package/expo): ~51.0.28
+- [expo-constants](https://www.npmjs.com/package/expo-constants): ~16.0.2
+- [expo-font](https://www.npmjs.com/package/expo-font): ~12.0.9
+- [expo-linking](https://www.npmjs.com/package/expo-linking): ^6.3.1
+- [expo-location](https://www.npmjs.com/package/expo-location): ^17.0.1
+- [expo-router](https://www.npmjs.com/package/expo-router): ~3.5.23
+- [expo-secure-store](https://www.npmjs.com/package/expo-secure-store): ^13.0.2
+- [expo-splash-screen](https://www.npmjs.com/package/expo-splash-screen): ~0.27.5
+- [expo-status-bar](https://www.npmjs.com/package/expo-status-bar): ~1.12.1
+- [expo-system-ui](https://www.npmjs.com/package/expo-system-ui): ~3.0.7
+- [expo-web-browser](https://www.npmjs.com/package/expo-web-browser): ~13.0.3
+- [jest](https://www.npmjs.com/package/jest): ^29.2.1
+- [jest-expo](https://www.npmjs.com/package/jest-expo): ~51.0.3
+- [nativewind](https://www.npmjs.com/package/nativewind): ^2.0.11
+- [prettier](https://www.npmjs.com/package/prettier): ^3.3.3
+- [react](https://www.npmjs.com/package/react): 18.2.0
+- [react-dom](https://www.npmjs.com/package/react-dom): 18.2.0
+- [react-native](https://www.npmjs.com/package/react-native): 0.74.5
+- [react-native-gesture-handler](https://www.npmjs.com/package/react-native-gesture-handler): ^2.19.0
+- [react-native-google-places-autocomplete](https://www.npmjs.com/package/react-native-google-places-autocomplete): ^2.5.6
+- [react-native-maps](https://www.npmjs.com/package/react-native-maps): ^1.18.0
+- [react-native-maps-directions](https://www.npmjs.com/package/react-native-maps-directions): ^1.9.0
+- [react-native-modal](https://www.npmjs.com/package/react-native-modal): ^13.0.1
+- [react-native-reanimated](https://www.npmjs.com/package/react-native-reanimated): ~3.10.1
+- [react-native-safe-area-context](https://www.npmjs.com/package/react-native-safe-area-context): 4.10.5
+- [react-native-screens](https://www.npmjs.com/package/react-native-screens): 3.31.1
+- [react-native-swiper](https://www.npmjs.com/package/react-native-swiper): ^1.6.0
+- [react-native-web](https://www.npmjs.com/package/react-native-web): ~0.19.10
+- [react-test-renderer](https://www.npmjs.com/package/react-test-renderer): 18.2.0
+- [stripe](https://www.npmjs.com/package/stripe): ^16.9.0
+- [tailwindcss](https://www.npmjs.com/package/tailwindcss): 3.3.2
+- [typescript](https://www.npmjs.com/package/typescript): ~5.3.3
+- [zustand](https://www.npmjs.com/package/zustand): ^4.5.5
 
-- [@clerk/clerk-expo](https://www.npmjs.com/package/@clerk/clerk-expo "~2.2.5")
-- [@expo/metro-runtime](https://www.npmjs.com/package/@expo/metro-runtime "~3.2.3")
-- [@expo/vector-icons](https://www.npmjs.com/package/@expo/vector-icons "~14.0.2")
-- [@gorhom/bottom-sheet](https://www.npmjs.com/package/@gorhom/bottom-sheet "~4.6.4")
-- [@neondatabase/serverless](https://www.npmjs.com/package/@neondatabase/serverless "~0.9.4")
-- [@react-navigation/native](https://reactnavigation.org/ "~6.0.2")
-- [@stripe/stripe-react-native](https://www.npmjs.com/package/@stripe/stripe-react-native "~0.38.4")
-- [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier "~9.1.0")
-- [eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier "~5.2.1")
-- [Expo](https://docs.expo.dev/versions/latest/ "~51.0.28")
-- [Expo Constants](https://docs.expo.dev/versions/latest/sdk/constants "~16.0.2")
-- [Expo Font](https://docs.expo.dev/versions/latest/sdk/font "~12.0.9")
-- [Expo Linking](https://docs.expo.dev/versions/latest/sdk/linking "~6.3.1")
-- [Expo Location](https://docs.expo.dev/versions/latest/sdk/location "~17.0.1")
-- [Expo Router](https://docs.expo.dev/versions/latest/sdk/router "~3.5.23")
-- [Expo Secure Store](https://docs.expo.dev/versions/latest/sdk/securestore "~13.0.2")
-- [Expo Splash Screen](https://docs.expo.dev/versions/latest/sdk/splash-screen "~0.27.5")
-- [Expo Status Bar](https://docs.expo.dev/versions/latest/sdk/status-bar "~1.12.1")
-- [Expo System UI](https://docs.expo.dev/versions/latest/sdk/system-ui "~3.0.7")
-- [Expo Web Browser](https://docs.expo.dev/versions/latest/sdk/webbrowser "~13.0.3")
-- [Nativewind](https://www.npmjs.com/package/nativewind "~2.0.11")
-- [Prettier](https://prettier.io/ "~3.3.3")
-- [React](https://react.dev/ "~18.2.0")
-- [React DOM](https://react.dev/ "~18.2.0")
-- [React Native](https://reactnative.dev/ "~0.74.5")
-- [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/docs/ "~2.19.0")
-- [React Native Google Places Autocomplete](https://www.npmjs.com/package/react-native-google-places-autocomplete "~2.5.6")
-- [React Native Maps](https://www.npmjs.com/package/react-native-maps "~1.18.0")
-- [React Native Maps Directions](https://www.npmjs.com/package/react-native-maps-directions "~1.9.0")
-- [React Native Modal](https://www.npmjs.com/package/react-native-modal "~13.0.1")
-- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/ "~3.10.1")
-- [React Native Safe Area Context](https://www.npmjs.com/package/react-native-safe-area-context "~4.10.5")
-- [React Native Screens](https://reactnavigation.org/docs/react-native-screens "~3.31.1")
-- [React Native Swiper](https://www.npmjs.com/package/react-native-swiper "~1.6.0")
-- [React Native Web](https://necolas.github.io/react-native-web/docs/ "~0.19.10")
-- [Stripe](https://www.npmjs.com/package/stripe "~16.9.0")
-- [Zustand](https://www.npmjs.com/package/zustand "~4.5.5")
-- [@babel/core](https://babel.dev/ "~7.20.0")
-- [@types/jest](https://www.npmjs.com/package/@types/jest "~29.5.12")
-- [@types/react](https://www.npmjs.com/package/@types/react "~18.2.45")
-- [@types/react-test-renderer](https://www.npmjs.com/package/@types/react-test-renderer "~18.0.7")
-- [ESLint](https://eslint.org/ "~8.57.0")
-- [eslint-config-expo](https://www.npmjs.com/package/eslint-config-expo "~7.1.2")
-- [Jest](https://jestjs.io/ "~29.2.1")
-- [Jest Expo](https://www.npmjs.com/package/jest-expo "~51.0.3")
-- [React Test Renderer](https://react.dev/ "~18.2.0")
-- [Tailwind CSS](https://tailwindcss.com/ "~3.3.2")
-- [TypeScript](https://www.typescriptlang.org/ "~5.3.3")
 <!--- DEPENDENCIES_END --->
 
 ## :coffee: Buy Me a Coffee
