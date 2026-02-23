@@ -39,6 +39,8 @@
 
 Here is the folder structure of Ryde.
 
+<!--- FOLDER_STRUCTURE_START --->
+
 ```bash
 uber-clone/
   |- app/
@@ -92,6 +94,8 @@ uber-clone/
   |- tailwind.config.js
   |- tsconfig.json
 ```
+
+<!--- FOLDER_STRUCTURE_END --->
 
 <br />
 
@@ -247,6 +251,8 @@ You might encounter some bugs while using this app. You are more than welcome to
 
 Useful resources and libraries that are used in Ryde:
 
+<!--- DEPENDENCIES_START --->
+
 - [@clerk/clerk-expo](https://www.npmjs.com/package/@clerk/clerk-expo "~2.2.5")
 - [@expo/metro-runtime](https://www.npmjs.com/package/@expo/metro-runtime "~3.2.3")
 - [@expo/vector-icons](https://www.npmjs.com/package/@expo/vector-icons "~14.0.2")
@@ -295,6 +301,7 @@ Useful resources and libraries that are used in Ryde:
 - [React Test Renderer](https://react.dev/ "~18.2.0")
 - [Tailwind CSS](https://tailwindcss.com/ "~3.3.2")
 - [TypeScript](https://www.typescriptlang.org/ "~5.3.3")
+<!--- DEPENDENCIES_END --->
 
 ## :coffee: Buy Me a Coffee
 
