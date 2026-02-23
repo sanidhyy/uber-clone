@@ -1,0 +1,12 @@
+name: Publish update
+
+on:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  publish_update:
+    type: update
+    params:
+      branch: ${{ github.ref_name || "default" }}
