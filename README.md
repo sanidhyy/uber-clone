@@ -270,7 +270,7 @@ Useful resources and libraries that are used in Ryde:
 - [@types/react-test-renderer](https://www.npmjs.com/package/@types/react-test-renderer): ^18.0.7
 - [eslint](https://www.npmjs.com/package/eslint): ^8.57.0
 - [eslint-config-expo](https://www.npmjs.com/package/eslint-config-expo): ^7.1.2
-- [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier): ^9.1.0
+- [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier): ^10.1.8
 - [eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier): ^5.2.1
 - [expo](https://www.npmjs.com/package/expo): ~51.0.28
 - [expo-constants](https://www.npmjs.com/package/expo-constants): ~16.0.2
