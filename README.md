@@ -259,9 +259,9 @@ Useful resources and libraries that are used in Ryde:
 <!--- DEPENDENCIES_START --->
 - [@babel/core](https://www.npmjs.com/package/@babel/core): ^7.20.0
 - [@clerk/clerk-expo](https://www.npmjs.com/package/@clerk/clerk-expo): ^2.2.5
-- [@expo/metro-runtime](https://www.npmjs.com/package/@expo/metro-runtime): ~3.2.3
+- [@expo/metro-runtime](https://www.npmjs.com/package/@expo/metro-runtime): ~58.0.17
 - [@expo/vector-icons](https://www.npmjs.com/package/@expo/vector-icons): ^14.0.2
-- [@gorhom/bottom-sheet](https://www.npmjs.com/package/@gorhom/bottom-sheet): ^4.6.4
+- [@gorhom/bottom-sheet](https://www.npmjs.com/package/@gorhom/bottom-sheet): ^5.2.14
 - [@neondatabase/serverless](https://www.npmjs.com/package/@neondatabase/serverless): ^0.9.4
 - [@react-navigation/native](https://www.npmjs.com/package/@react-navigation/native): ^6.0.2
 - [@stripe/stripe-react-native](https://www.npmjs.com/package/@stripe/stripe-react-native): ^0.38.4
@@ -290,7 +290,7 @@ Useful resources and libraries that are used in Ryde:
 - [react](https://www.npmjs.com/package/react): 18.2.0
 - [react-dom](https://www.npmjs.com/package/react-dom): 18.2.0
 - [react-native](https://www.npmjs.com/package/react-native): 0.74.5
-- [react-native-gesture-handler](https://www.npmjs.com/package/react-native-gesture-handler): ^2.19.0
+- [react-native-gesture-handler](https://www.npmjs.com/package/react-native-gesture-handler): ^3.5.0
 - [react-native-google-places-autocomplete](https://www.npmjs.com/package/react-native-google-places-autocomplete): ^2.5.6
 - [react-native-maps](https://www.npmjs.com/package/react-native-maps): ^1.18.0
 - [react-native-maps-directions](https://www.npmjs.com/package/react-native-maps-directions): ^1.9.0
