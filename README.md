@@ -258,7 +258,7 @@ Useful resources and libraries that are used in Ryde:
 
 <!--- DEPENDENCIES_START --->
 - [@babel/core](https://www.npmjs.com/package/@babel/core): ^7.20.0
-- [@clerk/clerk-expo](https://www.npmjs.com/package/@clerk/clerk-expo): ^2.2.5
+- [@clerk/clerk-expo](https://www.npmjs.com/package/@clerk/clerk-expo): ^2.20.0
 - [@expo/metro-runtime](https://www.npmjs.com/package/@expo/metro-runtime): ~58.0.17
 - [@expo/vector-icons](https://www.npmjs.com/package/@expo/vector-icons): ^14.0.2
 - [@gorhom/bottom-sheet](https://www.npmjs.com/package/@gorhom/bottom-sheet): ^5.2.14
