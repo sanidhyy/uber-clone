@@ -12,7 +12,7 @@
         "@neondatabase/serverless": "^0.9.4",
         "@react-navigation/native": "^6.0.2",
         "@stripe/stripe-react-native": "^0.38.4",
-        "eslint-config-prettier": "^9.1.0",
+        "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-prettier": "^5.2.1",
         "expo": "~51.0.28",
         "expo-constants": "~16.0.2",
@@ -1107,7 +1107,7 @@
 
     "eslint-config-expo": ["eslint-config-expo@7.1.2", "", { "dependencies": { "@typescript-eslint/eslint-plugin": "^7.4.0", "@typescript-eslint/parser": "^7.4.0", "eslint-import-resolver-typescript": "^3.6.1", "eslint-plugin-expo": "^0.0.1", "eslint-plugin-import": "^2.29.1", "eslint-plugin-react": "^7.34.0", "eslint-plugin-react-hooks": "^4.6.0" }, "peerDependencies": { "eslint": ">=8.10" } }, "sha512-WxrDVNklN43Op0v3fglQfzL2bC7vqacUq9oVwJcGCUEDzdM7kGOR6pfEJiz3i3dQv3cFjHtct0CFEExep5c/dA=="],
 
-    "eslint-config-prettier": ["eslint-config-prettier@9.1.0", "", { "peerDependencies": { "eslint": ">=7.0.0" }, "bin": { "eslint-config-prettier": "bin/cli.js" } }, "sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw=="],
+    "eslint-config-prettier": ["eslint-config-prettier@10.1.8", "", { "peerDependencies": { "eslint": ">=7.0.0" }, "bin": { "eslint-config-prettier": "bin/cli.js" } }, "sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w=="],
 
     "eslint-import-resolver-node": ["eslint-import-resolver-node@0.3.9", "", { "dependencies": { "debug": "^3.2.7", "is-core-module": "^2.13.0", "resolve": "^1.22.4" } }, "sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g=="],
 
