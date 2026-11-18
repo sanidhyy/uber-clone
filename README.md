@@ -84,7 +84,7 @@ uber-clone/
   |- .gitignore
   |- app.json
   |- babel.config.js
-  |- bun.lockb
+  |- bun.lock
   |- eas.json
   |- environment.d.ts
   |- nativewind-env.d.ts
