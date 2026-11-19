@@ -303,7 +303,7 @@ Useful resources and libraries that are used in Ryde:
 - [react-test-renderer](https://www.npmjs.com/package/react-test-renderer): 18.2.0
 - [stripe](https://www.npmjs.com/package/stripe): ^16.9.0
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): 3.3.2
-- [typescript](https://www.npmjs.com/package/typescript): ~5.3.3
+- [typescript](https://www.npmjs.com/package/typescript): ~7.0.2
 - [zustand](https://www.npmjs.com/package/zustand): ^4.5.5
 
 <!--- DEPENDENCIES_END --->
