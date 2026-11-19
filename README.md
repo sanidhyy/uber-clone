@@ -283,10 +283,10 @@ Useful resources and libraries that are used in Ryde:
 - [expo-status-bar](https://www.npmjs.com/package/expo-status-bar): ~1.12.1
 - [expo-system-ui](https://www.npmjs.com/package/expo-system-ui): ~3.0.7
 - [expo-web-browser](https://www.npmjs.com/package/expo-web-browser): ~13.0.3
-- [jest](https://www.npmjs.com/package/jest): ^29.2.1
+- [jest](https://www.npmjs.com/package/jest): ^30.5.2
 - [jest-expo](https://www.npmjs.com/package/jest-expo): ~51.0.3
 - [nativewind](https://www.npmjs.com/package/nativewind): ^2.0.11
-- [prettier](https://www.npmjs.com/package/prettier): ^3.3.3
+- [prettier](https://www.npmjs.com/package/prettier): ^3.10.1
 - [react](https://www.npmjs.com/package/react): 18.2.0
 - [react-dom](https://www.npmjs.com/package/react-dom): 18.2.0
 - [react-native](https://www.npmjs.com/package/react-native): 0.74.5
