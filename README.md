@@ -273,7 +273,7 @@ Useful resources and libraries that are used in Ryde:
 - [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier): ^10.1.8
 - [eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier): ^5.2.1
 - [expo](https://www.npmjs.com/package/expo): ~51.0.28
-- [expo-constants](https://www.npmjs.com/package/expo-constants): ~16.0.2
+- [expo-constants](https://www.npmjs.com/package/expo-constants): ~58.0.16
 - [expo-font](https://www.npmjs.com/package/expo-font): ~12.0.9
 - [expo-linking](https://www.npmjs.com/package/expo-linking): ^6.3.1
 - [expo-location](https://www.npmjs.com/package/expo-location): ^17.0.1
